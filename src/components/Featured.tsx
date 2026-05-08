@@ -46,27 +46,33 @@ const tours = [
 
 export default function Featured() {
   const [active, setActive] = useState(0);
+  const [displayed, setDisplayed] = useState(0);
   const [visible, setVisible] = useState(true);
+
+  const switchTo = (next: number) => {
+    setVisible(false);
+    setTimeout(() => {
+      setActive(next);
+      setDisplayed(next);
+      setVisible(true);
+    }, 1200);
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setVisible(false);
-      setTimeout(() => {
-        setActive((prev) => (prev + 1) % tours.length);
-        setVisible(true);
-      }, 1200);
+      switchTo((active + 1) % tours.length);
     }, 7000);
     return () => clearInterval(timer);
-  }, []);
+  }, [active]);
 
   return (
     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-12 lg:py-0" style={{background: "linear-gradient(to bottom right, #ffffff 0%, #404040 100%)"}} id="tours">
       <div className="flex-1 h-[400px] lg:h-[800px] mb-8 lg:mb-0 lg:order-2 relative overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.img
-            key={active}
-            src={tours[active].image}
-            alt={tours[active].label}
+            key={displayed}
+            src={tours[displayed].image}
+            alt={tours[displayed].label}
             className="w-full h-full object-cover absolute inset-0"
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -91,11 +97,11 @@ export default function Featured() {
           {tours.map((tour, i) => (
             <motion.button
               key={tour.label}
-              onClick={() => { setVisible(false); setTimeout(() => { setActive(i); setVisible(true); }, 1200); }}
+              onClick={() => switchTo(i)}
               animate={{
-                backgroundColor: active === i ? "#000000" : "#00000000",
-                color: active === i ? "#ffffff" : "#404040",
-                borderColor: active === i ? "#000000" : "#d4d4d4",
+                backgroundColor: displayed === i ? "#000000" : "#00000000",
+                color: displayed === i ? "#ffffff" : "#404040",
+                borderColor: displayed === i ? "#000000" : "#d4d4d4",
               }}
               transition={{ duration: 1.2, ease: "easeInOut" }}
               className="px-3 py-1 text-xs uppercase tracking-wide border cursor-pointer"
