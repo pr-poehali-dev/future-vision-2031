@@ -30,10 +30,18 @@ export default function Hero() {
         <p className="text-sm uppercase tracking-widest mb-4 opacity-80">Мурманская область</p>
         <motion.h1
           className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 cursor-default select-none"
+          initial={{ letterSpacing: "-0.01em" }}
           whileHover={{
-            letterSpacing: "0.08em",
-            textShadow: "0 0 40px rgba(255,255,255,0.6), 0 0 80px rgba(180,210,255,0.4)",
-            transition: { duration: 0.4, ease: "easeOut" }
+            letterSpacing: "0.12em",
+            textShadow: [
+              "0 1px 0 rgba(255,255,255,0.4)",
+              "0 2px 0 rgba(200,220,255,0.3)",
+              "0 3px 0 rgba(150,190,255,0.2)",
+              "0 0 30px rgba(255,255,255,0.5)",
+              "0 0 60px rgba(160,200,255,0.35)",
+              "0 0 100px rgba(100,160,255,0.2)",
+            ].join(", "),
+            transition: { duration: 0.5, ease: "easeOut" }
           }}
         >
           КОЛЬСКИЙ
