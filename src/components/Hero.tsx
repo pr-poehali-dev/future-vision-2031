@@ -28,11 +28,18 @@ export default function Hero() {
 
       <div className="relative z-10 text-center text-white">
         <p className="text-sm uppercase tracking-widest mb-4 opacity-80">Мурманская область</p>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
+        <motion.h1
+          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 cursor-default select-none"
+          whileHover={{
+            letterSpacing: "0.08em",
+            textShadow: "0 0 40px rgba(255,255,255,0.6), 0 0 80px rgba(180,210,255,0.4)",
+            transition: { duration: 0.4, ease: "easeOut" }
+          }}
+        >
           КОЛЬСКИЙ
           <br />
           ПОЛУОСТРОВ
-        </h1>
+        </motion.h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90">
           Экскурсии и туры по самым диким и красивым местам русского Севера — от 1 дня до недели
         </p>
