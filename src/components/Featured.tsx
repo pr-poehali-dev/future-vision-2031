@@ -55,7 +55,7 @@ export default function Featured() {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-12 lg:py-0" style={{background: "linear-gradient(160deg, #ffffff 0%, #c8c8c8 45%, #e8e8e8 100%)"}} id="tours">
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-12 lg:py-0" style={{background: "linear-gradient(160deg, #ffffff 0%, #a0a0a0 50%, #d0d0d0 100%)"}} id="tours">
       <div className="flex-1 h-[400px] lg:h-[800px] mb-8 lg:mb-0 lg:order-2 relative overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.img
