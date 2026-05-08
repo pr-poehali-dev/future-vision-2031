@@ -92,10 +92,10 @@ export default function Featured() {
             <button
               key={tour.label}
               onClick={() => setActive(i)}
-              className={`px-3 py-1 text-xs uppercase tracking-wide border transition-all duration-300 cursor-pointer ${
+              className={`px-3 py-1 text-xs uppercase tracking-wide border cursor-pointer transition-all duration-700 ease-in-out ${
                 active === i
                   ? "bg-black text-white border-black"
-                  : "border-neutral-300 text-neutral-700 hover:border-neutral-600"
+                  : "bg-transparent text-neutral-700 border-neutral-300 hover:border-neutral-600"
               }`}
             >
               {tour.label}
