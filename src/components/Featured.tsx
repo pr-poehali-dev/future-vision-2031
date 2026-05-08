@@ -89,17 +89,19 @@ export default function Featured() {
 
         <div className="flex flex-wrap gap-2 mb-8">
           {tours.map((tour, i) => (
-            <button
+            <motion.button
               key={tour.label}
               onClick={() => { setVisible(false); setTimeout(() => { setActive(i); setVisible(true); }, 1200); }}
-              className={`px-3 py-1 text-xs uppercase tracking-wide border cursor-pointer transition-all duration-[1200ms] ease-in-out ${
-                active === i
-                  ? "bg-black text-white border-black"
-                  : "bg-transparent text-neutral-700 border-neutral-300 hover:border-neutral-600"
-              }`}
+              animate={{
+                backgroundColor: active === i ? "#000000" : "#00000000",
+                color: active === i ? "#ffffff" : "#404040",
+                borderColor: active === i ? "#000000" : "#d4d4d4",
+              }}
+              transition={{ duration: 1.2, ease: "easeInOut" }}
+              className="px-3 py-1 text-xs uppercase tracking-wide border cursor-pointer"
             >
               {tour.label}
-            </button>
+            </motion.button>
           ))}
         </div>
 
