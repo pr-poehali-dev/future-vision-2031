@@ -21,6 +21,7 @@ export default function Promo() {
             src="https://cdn.poehali.dev/projects/f27d1b28-413b-4023-9082-619013cf6dd9/files/09df9467-1caa-4f7d-982d-13f626637743.jpg"
             alt="Северное сияние над Кольским полуостровом"
             className="w-full h-full object-cover"
+            style={{ filter: "contrast(1.2) brightness(1.15) saturate(1.4)" }}
           />
         </motion.div>
       </div>
