@@ -23,7 +23,7 @@ export default function Hero() {
           alt="Северный пейзаж Кольского полуострова"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0" style={{background: "linear-gradient(to bottom, rgba(30, 80, 160, 0.35) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.45) 100%)"}} />
       </motion.div>
 
       <div className="relative z-10 text-center text-white">
