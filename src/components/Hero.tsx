@@ -19,11 +19,11 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full"
       >
         <img
-          src="https://cdn.poehali.dev/projects/f27d1b28-413b-4023-9082-619013cf6dd9/files/9a9de05d-9539-432c-a7e8-3192c25ebe3b.jpg"
+          src="https://cdn.poehali.dev/projects/f27d1b28-413b-4023-9082-619013cf6dd9/files/5ea1e34f-e56a-4daf-85b6-259e65bd6934.jpg"
           alt="Северный пейзаж Кольского полуострова"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0" style={{background: "linear-gradient(to bottom, rgba(30, 80, 160, 0.35) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.45) 100%)"}} />
+        <div className="absolute inset-0" style={{background: "linear-gradient(to bottom, rgba(160, 30, 80, 0.25) 0%, rgba(30, 60, 140, 0.2) 40%, rgba(0,0,0,0.4) 100%)"}} />
       </motion.div>
 
       <div className="relative z-10 text-center text-white">
