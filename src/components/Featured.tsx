@@ -79,30 +79,29 @@ export default function Featured() {
       <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-12 lg:order-1">
         <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-600">Групповые и индивидуальные туры</h3>
 
-        <motion.div
+        <motion.p
           animate={{ opacity: visible ? 1 : 0 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
+          className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight"
         >
-          <p className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight">
-            {tours[active].description}
-          </p>
+          {tours[active].description}
+        </motion.p>
 
-          <div className="flex flex-wrap gap-2 mb-8">
-            {tours.map((tour, i) => (
-              <button
-                key={tour.label}
-                onClick={() => { setVisible(false); setTimeout(() => { setActive(i); setVisible(true); }, 1200); }}
-                className={`px-3 py-1 text-xs uppercase tracking-wide border cursor-pointer transition-all duration-700 ease-in-out ${
-                  active === i
-                    ? "bg-black text-white border-black"
-                    : "bg-transparent text-neutral-700 border-neutral-300 hover:border-neutral-600"
-                }`}
-              >
-                {tour.label}
-              </button>
-            ))}
-          </div>
-        </motion.div>
+        <div className="flex flex-wrap gap-2 mb-8">
+          {tours.map((tour, i) => (
+            <button
+              key={tour.label}
+              onClick={() => { setVisible(false); setTimeout(() => { setActive(i); setVisible(true); }, 1200); }}
+              className={`px-3 py-1 text-xs uppercase tracking-wide border cursor-pointer transition-all duration-[1200ms] ease-in-out ${
+                active === i
+                  ? "bg-black text-white border-black"
+                  : "bg-transparent text-neutral-700 border-neutral-300 hover:border-neutral-600"
+              }`}
+            >
+              {tour.label}
+            </button>
+          ))}
+        </div>
 
         <button className="bg-black text-white border border-black px-4 py-2 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-wide">
           Все маршруты
