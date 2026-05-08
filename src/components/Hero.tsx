@@ -19,7 +19,7 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full"
       >
         <img
-          src="https://cdn.poehali.dev/projects/f27d1b28-413b-4023-9082-619013cf6dd9/files/5ea1e34f-e56a-4daf-85b6-259e65bd6934.jpg"
+          src="https://cdn.poehali.dev/projects/f27d1b28-413b-4023-9082-619013cf6dd9/files/cb5486ec-6f9a-4b60-a5f3-66297f6ecb71.jpg"
           alt="Северный пейзаж Кольского полуострова"
           className="w-full h-full object-cover"
         />
