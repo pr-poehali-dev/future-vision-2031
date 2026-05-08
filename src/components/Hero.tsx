@@ -39,27 +39,10 @@ function MagneticLetter({ char }: { char: string }) {
       onMouseLeave={handleMouseLeave}
       animate={{
         textShadow: hovered
-          ? [
-              "1px 1px 0 rgba(120,160,220,0.9)",
-              "2px 2px 0 rgba(100,140,200,0.8)",
-              "3px 3px 0 rgba(80,120,180,0.7)",
-              "4px 4px 0 rgba(60,100,160,0.6)",
-              "5px 5px 0 rgba(40,80,140,0.5)",
-              "6px 6px 0 rgba(20,60,120,0.4)",
-              "7px 7px 0 rgba(10,40,100,0.3)",
-              "8px 8px 0 rgba(0,20,80,0.2)",
-              "0 0 40px rgba(255,255,255,0.5)",
-              "0 0 80px rgba(160,200,255,0.3)",
-            ].join(", ")
-          : [
-              "1px 1px 0 rgba(80,100,140,0.6)",
-              "2px 2px 0 rgba(60,80,120,0.5)",
-              "3px 3px 0 rgba(40,60,100,0.4)",
-              "4px 4px 0 rgba(20,40,80,0.3)",
-              "5px 5px 0 rgba(10,20,60,0.2)",
-            ].join(", "),
+          ? "0 1px 0 rgba(255,255,255,0.5), 0 2px 0 rgba(200,220,255,0.3), 0 3px 0 rgba(150,190,255,0.2), 0 0 30px rgba(255,255,255,0.6), 0 0 60px rgba(160,200,255,0.4)"
+          : "none",
       }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
+      transition={{ duration: 0.3 }}
     >
       {char}
     </motion.span>
