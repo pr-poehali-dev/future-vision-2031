@@ -78,10 +78,10 @@ export default function Featured() {
           <motion.p
             key={active}
             className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.4 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
           >
             {tours[active].description}
           </motion.p>
