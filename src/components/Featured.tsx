@@ -50,7 +50,7 @@ export default function Featured() {
   useEffect(() => {
     const timer = setInterval(() => {
       setActive((prev) => (prev + 1) % tours.length);
-    }, 5000);
+    }, 7000);
     return () => clearInterval(timer);
   }, []);
 
